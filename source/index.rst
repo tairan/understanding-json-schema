@@ -46,12 +46,12 @@ JSON Schema 是一个很强大的用于验证JSON数据结构的工具。然而�
 
 - If you're not sure what a schema is, check out `about`.
 
-- 如果你还是不太清楚什么是schema，请查看`关于`。
+- 如果你还是不太清楚什么是schema，请查看`about`。
 
 - `basics` chapter should be enough to get you started with
   understanding the core `reference`.
 
-- `基本`章节可以满足你理解核心的`reference`
+- `basics`章节可以满足你理解核心的`reference`
 
 - When you start developing large schemas with many nested and
   repeated sections, check out `structuring`.

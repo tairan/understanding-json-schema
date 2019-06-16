@@ -1,11 +1,13 @@
 .. _basics:
 
-The basics
+基础知识
 ==========
 
 In :ref:`about`, we described what a schema is, and hopefully
 justified the need for schema languages.  Here, we proceed to
 write a simple JSON Schema.
+
+In :ref:`about`, 我们通过写一个简单的JSON Schema来描述它是什么。
 
 Hello, World!
 -------------
@@ -13,6 +15,9 @@ Hello, World!
 When learning any new language, it's often helpful to start with the
 simplest thing possible.  In JSON Schema, an empty object is a
 completely valid schema that will accept any valid JSON.
+
+当我们开始学习一门新的语言时，比较有效的办法是从简单着手。在JSON Schema这里，
+一个空的对象就是完整的schema，并可以通过验证。
 
 .. schema_example::
 
@@ -29,6 +34,9 @@ completely valid schema that will accept any valid JSON.
 
 You can also use ``true`` in place of the empty object to represent a schema
 that matches anything, or ``false`` for a schema that matches nothing.
+
+在第六版里，你可以使用``true``来代替空对象表示任何匹配的元素，使用``false``表示没有
+任何匹配元素。
 
 .. schema_example::
 
@@ -47,13 +55,16 @@ that matches anything, or ``false`` for a schema that matches nothing.
    --X
    "Resistance is futile...  This will always fail!!!"
 
-The type keyword
+类型关键字 The type keyword
 ----------------
 
 Of course, we wouldn't be using JSON Schema if we wanted to just
 accept any JSON document.  The most common thing to do in a JSON
 Schema is to restrict to a specific type.  The ``type`` keyword is
 used for that.
+
+实际上，我们会使用JSON Schema来严格限制指定的类型，`type`关键字就是做
+这个的，如果不限制类型的话，就没必要使用Schema了。
 
 .. note::
 
