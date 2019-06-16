@@ -73,8 +73,13 @@ used for that.
     of writing a JSON Schema involves mapping a special "keyword" to a
     value within an object.
 
+    当本书提到JSON Schema "keywords"的时候，即一个对象里面的键值对。通常来说
+    写JSON Schema就是写对象中的"keywords"。
+
 For example, in the following, only strings are
 accepted:
+
+举例：下面的代码中，只允许string
 
 .. schema_example::
 
@@ -86,7 +91,9 @@ accepted:
 
 The ``type`` keyword is described in more detail in `type`.
 
-Declaring a JSON Schema
+``type``更详细的资料见 `type`
+
+声明一个JSON Schema Declaring a JSON Schema
 -----------------------
 
 Since JSON Schema is itself JSON, it's not always easy to tell when
@@ -94,10 +101,16 @@ something is JSON Schema or just an arbitrary chunk of JSON.  The
 ``$schema`` keyword is used to declare that something is JSON Schema.
 It's generally good practice to include it, though it is not required.
 
+JSON Schema同样也是JSON，但并不是单纯的JSON就可以作为Schema了。使用关键字
+``$schema``来声明这是一个schema。推荐每个schema都包含它，但也不是必需的。
+
 .. note::
     For brevity, the ``$schema`` keyword isn't included in most of the
     examples in this book, but it should always be used in the real
     world.
+
+    为了简便，本书中的示例并不都包含``$schema``关键字，但是在实际生产环境请
+    一定包含。
 
 .. schema_example::
 
@@ -107,16 +120,22 @@ You can also use this keyword to declare which version of the JSON
 Schema specification that the schema is written to.  See `schema` for
 more information.
 
-Declaring a unique identifier
+你可以使用这个关键字来指定JSON Schema的版本。详情参见`schema`
+
+声明一个唯一ID Declaring a unique identifier
 -----------------------------
 
 It is also best practice to include an ``$id`` property as a unique
 identifier for each schema.  For now, just set it to a URL at a domain
 you control, for example::
 
+包含一个``$id``属性，也同样是最佳实践之一。现在，设置一个你自己的URL。
+
    { "$id": "http://yourdomain.com/schemas/myschema.json" }
 
 The details of `id` become more apparent when you start `structuring`.
+
+更多`id`的细节在`structuring`中描述。
 
 |draft6|
 
@@ -124,3 +143,5 @@ The details of `id` become more apparent when you start `structuring`.
 
     --Draft 4
     In Draft 4, ``$id`` is just ``id`` (without the dollar-sign).
+
+    在第四个草案中 ``$id`` 不包含 ``$``，只有 ``id``
